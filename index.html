@@ -1,160 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <title>Loan Calculator</title>
-  <style>
-    body {
-      background: linear-gradient(135deg, #4b79a1, #283e51);
-      color: #8b3434;
-      font-family: 'Arial', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .card {
-      background-color: #fef9e7;
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-      padding: 25px;
-      max-width: 500px;
-      width: 100%;
-    }
-    .heading {
-      color: #d81b60;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .form-group {
-      margin-bottom: 20px;
-    }
-    .form-control {
-      border-radius: 5px;
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #4b79a1;
-      background-color: #ffffff;
-    }
-    .input-group-text {
-      background-color: #81c784;
-      border-radius: 5px 0 0 5px;
-      color: #ffffff;
-    }
-    .btn-dark {
-      background-color: #0288d1;
-      border: none;
-      padding: 10px;
-      font-size: 18px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-    }
-    .btn-dark:hover {
-      background-color: #01579b;
-    }
-    #loading {
-      display: none;
-      text-align: center;
-      margin: 20px 0;
-    }
-    #loading img {
-      width: 50px;
-      height: 50px;
-    }
-    #results {
-      display: none;
-      background-color: #e1f5fe;
-      padding: 15px;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
-    #results h5 {
-      color: #d81b60;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-    #results .form-control {
-      background-color: #ffffff;
-      color: #2e7d32;
-      font-weight: bold;
-    }
-    .alert-danger {
-      background-color: #ef5350;
-      color: #ffffff;
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 15px;
-      text-align: center;
-      font-size: 14px;
-    }
-    @media (max-width: 576px) {
-      .card { padding: 15px; }
-      .heading { font-size: 1.8rem; }
-      .form-control, .input-group-text { font-size: 14px; }
-      .btn-dark { font-size: 16px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-dark">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 mx-auto">
-        <div class="card card-body text-center mt-5">
-          <h1 class="heading display-5 pb-3">Loan Calculator</h1>
-          <form id="loan-form">
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-text">$</span>
-                <input type="number" class="form-control" id="amount" placeholder="Loan Amount" min="0" step="0.01" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-text">%</span>
-                <input type="number" class="form-control" id="interest" placeholder="Interest" min="0" step="0.01" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="number" class="form-control" id="years" placeholder="Years to repay" min="0" step="1" required>
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Calculate" class="btn btn-dark btn-block">
-            </div>
-          </form>
-          <div id="loading">
-            <img src="img/loading.gif" alt="Loading...">
-          </div>
-          <div id="results" class="pt-4">
-            <h5>Results</h5>
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-text">Total Payment</span>
-                <input type="number" class="form-control" id="total-payment" disabled>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-text">Monthly Payment</span>
-                <input type="number" class="form-control" id="monthly-payment" disabled>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="input-group">
-                <span class="input-group-text">Total Interest</span>
-                <input type="number" class="form-control" id="total-interest" disabled>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<body>
+    <div class="container">
+        <h1 class="heading">Body Mass Index (BMI) Calculator</h1>
+        Your Height (cm):
+        <input type="number" class="input" id="height" value="180" placeholder="Enter your height in cm">
+        Your Weight (kg):
+        <input type="number" class="input" id="weight" value="80" placeholder="Enter your weight in kg">
+        <button class="btn" id="btn">Compute BMI</button>
+        <input disabled type="text" class="input" id="bmi-result">
+        <h4 class="info-text">Weight Condition: <span id="weight-condition"></span></h4>
     </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script defer src="app.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
-
