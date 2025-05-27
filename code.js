@@ -4,12 +4,13 @@
 const form = document.getElementById('loan-form');
 //form.addEventListener('submit',calculateResults);//Without loader
 form.addEventListener('submit',function(e){
+e.preventDefault();
 //Hide Results
 document.getElementById('results').style.display='none';
 //Show Loader
 document.getElementById('loading').style.display='block';
 setTimeout(calculateResults,2000);
-e.preventDefault();
+
 });
 //Calculate Results function
 function calculateResults(e){
