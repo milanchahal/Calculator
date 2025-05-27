@@ -1,4 +1,126 @@
-/* * {
+/* General body styling */
+body {
+  background-color: #343a40; /* Dark background as per Bootstrap bg-dark */
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card styling */
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Heading styling */
+.heading {
+  color: #343a40;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Form inputs */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+}
+
+.input-group-text {
+  background-color: #f8f9fa;
+  border-radius: 5px 0 0 5px;
+  color: #343a40;
+}
+
+/* Submit button */
+.btn-dark {
+  background-color: #343a40;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+  background-color: #495057;
+}
+
+/* Loader */
+#loading {
+  display: none;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#loading img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Results section */
+#results {
+  display: none;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#results h5 {
+  color: #343a40;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#results .form-control {
+  background-color: #ffffff;
+  color: #343a40;
+  font-weight: bold;
+}
+
+/* Error message */
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .card {
+    padding: 15px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .form-control,
+  .input-group-text {
+    font-size: 14px;
+  }
+
+  .btn-dark {
+    font-size: 16px;
+  }
+}/* * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
