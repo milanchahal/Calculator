@@ -6,12 +6,112 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link rel="stylesheet" href="styles.css">
+<!-- <link rel="stylesheet" href="styles.css"> -->
 <!--   <style>
 #loading, #results{
 display: none;
-}
-</style> -->
+} -->
+    <style>
+    body {
+      background: linear-gradient(135deg, #4b79a1, #283e51);
+      color: #ffffff;
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background-color: #fef9e7;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      padding: 25px;
+      max-width: 500px;
+      width: 100%;
+    }
+    .heading {
+      color: #d81b60;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-control {
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #4b79a1;
+      background-color: #ffffff;
+    }
+    .input-group-text {
+      background-color: #81c784;
+      border-radius: 5px 0 0 5px;
+      color: #ffffff;
+    }
+    .btn-dark {
+      background-color: #0288d1;
+      border: none;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-dark:hover {
+      background-color: #01579b;
+    }
+    #loading {
+      display: none;
+      text-align: center;
+      margin: 20px 0;
+    }
+    #loading img {
+      width: 50px;
+      height: 50px;
+    }
+    #results {
+      display: none;
+      background-color: #e1f5fe;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    #results h5 {
+      color: #d81b60;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    #results .form-control {
+      background-color: #ffffff;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+    .alert-danger {
+      background-color: #ef5350;
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
+    @media (max-width: 576px) {
+      .card {
+        padding: 15px;
+      }
+      .heading {
+        font-size: 1.8rem;
+      }
+      .form-control,
+      .input-group-text {
+        font-size: 14px;
+      }
+      .btn-dark {
+        font-size: 16px;
+      }
+    }
+  </style>
+<!-- </style> -->
 <title>Loan Calculator</title>
 </head>
 <body class="bg-dark">
