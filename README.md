@@ -1,13 +1,11 @@
-Loan Calculator
+BMI Calculator
 
-An interactive, stylish, and responsive loan calculator built using HTML, CSS, and JavaScript. This app calculates your monthly loan payments, total payments, and 
+BMI Range	Category
+< 18.5	Underweight
+18.5 – 24.9	Normal weight
+25.0 – 29.9	Overweight
+≥ 30.0	Obese
 
-total interest based on user input. Designed with a smooth UI and error handling for a better user experience.
+Implemented vibrant styling with CSS and transforms, ensuring cross-device compatibility. Deployed on GitHub Pages, demonstrating front-end expertise, UI/UX design, and iterative deployment skills.
+Made by Milan 
 
-💰 Calculates monthly payment, total payment, and total interest
-
-⚠️ Displays error messages for invalid inputs
-
-🎨 Colorful and clean responsive UI
-
-💻 Purely built with HTML, CSS & JavaScript
